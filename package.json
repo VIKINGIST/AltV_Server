@@ -1,0 +1,14 @@
+{
+    "type": "module",
+    "scripts": {
+        "update-natives": "npm run install-natives && npm run update-natives-impl",
+        "install-natives": "copy /Y node_modules\\natives\\natives_universal.js resources\\",
+        "update-natives-impl": "copy /Y node_modules\\natives\\impl.js resources\\"
+    },
+    "dependencies": {
+        "natives": "^1.1.6"
+    },
+    "devDependencies": {
+        "@altv/types-natives": "^16.2.0"
+    }
+}
