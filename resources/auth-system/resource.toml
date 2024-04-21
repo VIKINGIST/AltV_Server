@@ -1,12 +1,12 @@
 [resource]
-name = "auth-system"
-version = "1.0.0"
-authors = ["Your Name"]
-description = "Authentication system for alt:V"
-type = "js"
-main = "server/index.js"
-client_main = "client/index.js"
+name = 'auth-system'
+version = '1.0.0'
+authors = ['Your Name']
+description = 'Authentication system for alt:V'
+type = 'js'
+main = 'server/index.js'
+client_main = 'client/index.js'
 client_files = [
-    "client/*",
-    "ui/*"
+    'client/*',
+    'ui/*'
 ]

@@ -1,1 +1,31 @@
-[18:49:16] alt:V Server 16.0.153 (release)
+[19:00:14] alt:V Server 16.0.153 (release)
+[19:00:14] Starting alt:V Server on [::]:7788
+[19:00:14] Loading resource chat
+[19:00:14] Loaded resource chat
+[19:00:14] Loading resource freeroam
+[19:00:14] Loaded resource freeroam
+[19:00:14] Loading resource commands
+[19:00:15] Loaded resource commands
+[19:00:15] Loading resource auth-system
+[19:00:15][Error] Failed to start resource auth-system neither 'type' or 'client-type' was specified
+[19:00:15][Error] Failed to load resource auth-system
+[19:00:15] Required server permissions:
+[19:00:15] Optional server permissions:
+[19:00:15] Starting HTTP server on [::]:7788
+[19:00:15] Main thread started (ThreadId: 6924)
+[19:00:15] EntityStreamer thread started (ThreadId: 20192)
+[19:00:15] SyncSend thread started (ThreadId: 13344)
+[19:00:15] SyncSend thread started (ThreadId: 20356)
+[19:00:15] SyncSend thread started (ThreadId: 19688)
+[19:00:15] SyncSend thread started (ThreadId: 17968)
+[19:00:15] SyncSend thread started (ThreadId: 12732)
+[19:00:15] SyncSend thread started (ThreadId: 7600)
+[19:00:15] SyncSend thread started (ThreadId: 19604)
+[19:00:15] SyncSend thread started (ThreadId: 19740)
+[19:00:15] SyncReceive thread started (ThreadId: 20412)
+[19:00:15] NetworkWorker #1 thread started (ThreadId: 20124)
+[19:00:15] SyncReceive thread started (ThreadId: 18488)
+[19:00:15] SyncReceive thread started (ThreadId: 3924)
+[19:00:15] SyncReceive thread started (ThreadId: 8752)
+[19:00:15] Console thread started (ThreadId: 12584)
+[19:00:15][Warning] Server started in debug mode
