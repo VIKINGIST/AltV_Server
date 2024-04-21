@@ -1,0 +1,32 @@
+[15:53:18] alt:V Server 16.0.153 (release)
+[15:53:18] Starting alt:V Server on [::]:7788
+[15:53:18] Loading resource chat
+[15:53:19] Loaded resource chat
+[15:53:19] Loading resource freeroam
+[15:53:19] Loaded resource freeroam
+[15:53:19] Loading resource commands
+[15:53:19] Loaded resource commands
+[15:53:19] Loading resource auth-ui
+[15:53:19][Error] Could not open resource config
+[15:53:19][Error] Failed to load resource auth-ui
+[15:53:19] Required server permissions:
+[15:53:19] Optional server permissions:
+[15:53:19] Starting HTTP server on [::]:7788
+[15:53:19] Main thread started (ThreadId: 14536)
+[15:53:19] EntityStreamer thread started (ThreadId: 18320)
+[15:53:19] SyncSend thread started (ThreadId: 9296)
+[15:53:19] SyncSend thread started (ThreadId: 14716)
+[15:53:19] SyncSend thread started (ThreadId: 9568)
+[15:53:19] SyncSend thread started (ThreadId: 12380)
+[15:53:19] SyncSend thread started (ThreadId: 9012)
+[15:53:19] SyncSend thread started (ThreadId: 13644)
+[15:53:19] SyncSend thread started (ThreadId: 4672)
+[15:53:19] SyncSend thread started (ThreadId: 15184)
+[15:53:19] SyncReceive thread started (ThreadId: 196)
+[15:53:19] SyncReceive thread started (ThreadId: 14132)
+[15:53:19] NetworkWorker #1 thread started (ThreadId: 16268)
+[15:53:19] SyncReceive thread started (ThreadId: 15872)
+[15:53:19] SyncReceive thread started (ThreadId: 9356)
+[15:53:19] Console thread started (ThreadId: 14952)
+[15:53:19][Warning] Server started in debug mode
+[15:57:39] Sending accept 1 VIKINGIST
