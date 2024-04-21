@@ -1,8 +1,8 @@
-import * as alt from 'alt-server';
-import * as chat from 'alt-chat';
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
+const alt = require('alt-server');
+const chat = require('alt:chat');
+const bcrypt = require('bcrypt');
+const jwt = require('jwt');
+const dotenv = require('dotenv');
 
 dotenv.config();
 
@@ -42,7 +42,7 @@ chat.registerCmd('/register', async (player, _, _, rawArgs) => {
 });
 
 // Авторизація
-chat.registerCmd('/login', async (player, _, _, rawArgs) => {
+chat.registerCmd('/register', async (player, _, args) => {
   const [email, password] = rawArgs.split(' ');
 
   // Валідація вхідних даних

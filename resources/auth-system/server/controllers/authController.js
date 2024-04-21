@@ -1,6 +1,6 @@
 // server/controllers/authController.js
 
-const { createUser, getUserByEmail, getUserByHardwareId } = require('../database/user');
+const { createUser, getUserByEmail, getUserByHardwareId } = require('../models/user');
 const bcrypt = require('bcrypt');
 
 async function register(username, email, password, hardwareId) {
