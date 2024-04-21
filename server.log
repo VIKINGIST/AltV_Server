@@ -30,3 +30,10 @@
 [15:53:19] Console thread started (ThreadId: 14952)
 [15:53:19][Warning] Server started in debug mode
 [15:57:39] Sending accept 1 VIKINGIST
+[18:21:15] Stopping resource commands
+[18:21:15] Stopped resource commands
+[18:21:15] Stopping resource chat
+[18:21:15] Stopping resource freeroam
+[18:21:15] Stopped resource freeroam
+[18:21:15] Stopped resource chat
+[18:21:16] Server shutdown
