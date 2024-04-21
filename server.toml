@@ -11,4 +11,4 @@ website = 'example.com'
 language = 'en'
 description = 'alt:V Sample Server'
 modules = ['csharp-module', 'js-module', 'js-bytecode-module']
-resources = ['chat', 'freeroam', 'commands']
+resources = ['chat', 'freeroam', 'commands', 'auth-ui']

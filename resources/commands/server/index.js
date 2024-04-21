@@ -7,7 +7,7 @@ chat.registerCmd('tpm', (player) => {
 });
 
 alt.onClient('commands:SetMarker', (player, markerPos) => {
-    alt.log(`Отримано координати мітки від гравця ${player.name}: ${JSON.stringify(markerPos)}`);
+    //alt.log(`Отримано координати мітки від гравця ${player.name}: ${JSON.stringify(markerPos)}`);
     handleTeleportToMarker(player, markerPos);
 });
 
