@@ -1,1 +1,41 @@
-[20:52:43] alt:V Server 16.0.153 (release)
+[21:09:44] alt:V Server 16.0.153 (release)
+[21:09:44] Starting alt:V Server on [::]:7788
+[21:09:44] Loading resource chat
+[21:09:44] Loaded resource chat
+[21:09:44] Loading resource freeroam
+[21:09:44] Loaded resource freeroam
+[21:09:44] Loading resource commands
+[21:09:44] Loaded resource commands
+[21:09:44] Loading resource auth-system
+[21:09:44] Loaded resource auth-system
+[21:09:44] Required server permissions:
+[21:09:44] Optional server permissions:
+[21:09:44] Starting HTTP server on [::]:7788
+[21:09:44] Main thread started (ThreadId: 18308)
+[21:09:44] EntityStreamer thread started (ThreadId: 11828)
+[21:09:44] SyncSend thread started (ThreadId: 20332)
+[21:09:44] SyncSend thread started (ThreadId: 12092)
+[21:09:44] SyncSend thread started (ThreadId: 4212)
+[21:09:44] SyncSend thread started (ThreadId: 17480)
+[21:09:44] SyncSend thread started (ThreadId: 19568)
+[21:09:44] SyncSend thread started (ThreadId: 7432)
+[21:09:44] SyncSend thread started (ThreadId: 18048)
+[21:09:44] SyncSend thread started (ThreadId: 18972)
+[21:09:44] NetworkWorker #1 thread started (ThreadId: 17916)
+[21:09:44] SyncReceive thread started (ThreadId: 7972)
+[21:09:44] SyncReceive thread started (ThreadId: 6376)
+[21:09:44] SyncReceive thread started (ThreadId: 19756)
+[21:09:44] SyncReceive thread started (ThreadId: 19156)
+[21:09:44] Console thread started (ThreadId: 2196)
+[21:09:44][Warning] Server started in debug mode
+[21:09:55] Sending accept 1 VIKINGIST
+[21:10:28] [chat:cmd] VIKINGIST: /tpm
+[21:10:47] Stopping resource commands
+[21:10:47] Stopped resource commands
+[21:10:47] Stopping resource chat
+[21:10:47] Stopping resource freeroam
+[21:10:47] Stopped resource freeroam
+[21:10:47] Stopped resource chat
+[21:10:47] Stopping resource auth-system
+[21:10:47] Stopped resource auth-system
+[21:10:47] Server shutdown
