@@ -6,6 +6,9 @@
         "update-natives-impl": "copy /Y node_modules\\natives\\impl.js resources\\"
     },
     "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "jsonwebtoken": "^9.0.2",
+        "mariadb": "^2.5.3",
         "natives": "^1.1.6"
     },
     "devDependencies": {

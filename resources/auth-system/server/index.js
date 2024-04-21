@@ -1,7 +1,7 @@
 const alt = require('alt-server');
-const chat = require('alt:chat');
-const bcrypt = require('bcrypt');
-const jwt = require('jwt');
+const chat = alt.chat;
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
 dotenv.config();
@@ -14,7 +14,7 @@ function generateToken(userId) {
 }
 
 // Реєстрація
-chat.registerCmd('/register', async (player, _, _, rawArgs) => {
+chat.registerCmd('/register', async (player, _, args) => {
   const [email, password] = rawArgs.split(' ');
 
   // Валідація вхідних даних
@@ -71,7 +71,7 @@ chat.registerCmd('/register', async (player, _, args) => {
 });
 
 // Відновлення паролю
-chat.registerCmd('/resetpassword', async (player, _, _, rawArgs) => {
+chat.registerCmd('/resetpassword', async (player, _, args) => {
   const [email] = rawArgs.split(' ');
 
   // Валідація вхідних даних

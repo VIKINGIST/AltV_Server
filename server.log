@@ -1,0 +1,37 @@
+[20:29:45] alt:V Server 16.0.153 (release)
+[20:29:45] Starting alt:V Server on [::]:7788
+[20:29:45] Loading resource chat
+[20:29:45] Loaded resource chat
+[20:29:45] Loading resource freeroam
+[20:29:45] Loaded resource freeroam
+[20:29:45] Loading resource commands
+[20:29:45] Loaded resource commands
+[20:29:45] Loading resource auth-system
+[20:29:45][Error] Failed to load resource auth-system
+[20:29:45] Required server permissions:
+[20:29:45] Optional server permissions:
+[20:29:45] Starting HTTP server on [::]:7788
+[20:29:45] Main thread started (ThreadId: 11524)
+[20:29:45] EntityStreamer thread started (ThreadId: 16524)
+[20:29:45] SyncSend thread started (ThreadId: 15584)
+[20:29:45] SyncSend thread started (ThreadId: 7136)
+[20:29:45] SyncSend thread started (ThreadId: 4564)
+[20:29:45] SyncSend thread started (ThreadId: 19392)
+[20:29:45] SyncSend thread started (ThreadId: 17044)
+[20:29:45] SyncSend thread started (ThreadId: 4628)
+[20:29:45] SyncSend thread started (ThreadId: 532)
+[20:29:45] SyncSend thread started (ThreadId: 17708)
+[20:29:45] NetworkWorker #1 thread started (ThreadId: 5748)
+[20:29:45] SyncReceive thread started (ThreadId: 5032)
+[20:29:45] SyncReceive thread started (ThreadId: 13604)
+[20:29:45] SyncReceive thread started (ThreadId: 9772)
+[20:29:45] SyncReceive thread started (ThreadId: 9780)
+[20:29:45] Console thread started (ThreadId: 18192)
+[20:29:45][Warning] Server started in debug mode
+[20:35:53] Stopping resource commands
+[20:35:53] Stopped resource commands
+[20:35:53] Stopping resource chat
+[20:35:53] Stopping resource freeroam
+[20:35:53] Stopped resource freeroam
+[20:35:53] Stopped resource chat
+[20:35:54] Server shutdown
