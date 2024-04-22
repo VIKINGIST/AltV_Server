@@ -1,1 +1,30 @@
-[15:09:45] alt:V Server 16.0.153 (release)
+[16:10:39] alt:V Server 16.0.153 (release)
+[16:10:39] Starting alt:V Server on [::]:7788
+[16:10:39] Loading resource chat
+[16:10:39] Loaded resource chat
+[16:10:39] Loading resource freeroam
+[16:10:39] Loaded resource freeroam
+[16:10:39] Loading resource commands
+[16:10:39] Loaded resource commands
+[16:10:39] Loading resource auth-system
+[16:10:40] Loaded resource auth-system
+[16:10:40] Required server permissions:
+[16:10:40] Optional server permissions:
+[16:10:40] Starting HTTP server on [::]:7788
+[16:10:40] Main thread started (ThreadId: 7056)
+[16:10:40] EntityStreamer thread started (ThreadId: 296)
+[16:10:40] SyncSend thread started (ThreadId: 13824)
+[16:10:40] SyncSend thread started (ThreadId: 17800)
+[16:10:40] SyncSend thread started (ThreadId: 10964)
+[16:10:40] SyncSend thread started (ThreadId: 10320)
+[16:10:40] SyncReceive thread started (ThreadId: 2344)
+[16:10:40] SyncSend thread started (ThreadId: 17072)
+[16:10:40] SyncReceive thread started (ThreadId: 17960)
+[16:10:40] SyncSend thread started (ThreadId: 116)
+[16:10:40] SyncSend thread started (ThreadId: 7088)
+[16:10:40] SyncSend thread started (ThreadId: 16340)
+[16:10:40] NetworkWorker #1 thread started (ThreadId: 2032)
+[16:10:40] SyncReceive thread started (ThreadId: 18052)
+[16:10:40] SyncReceive thread started (ThreadId: 17344)
+[16:10:40] Console thread started (ThreadId: 4232)
+[16:10:40][Warning] Server started in debug mode
