@@ -73,7 +73,9 @@ alt.onClient('login', async (player, email, password) => {
 
     // Генерація та відправка JWT
     const token = generateToken(user.id);
-    alt.emitClient(player, 'auth:login', token);
+
+    // Відправка події 'auth:loginSuccess' клієнту
+    alt.emitClient(player, 'auth:loginSuccess', token);
   } catch (error) {
     console.error('Error during login:', error);
     player.send('Сталася помилка під час входу');
