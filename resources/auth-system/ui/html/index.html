@@ -6,33 +6,37 @@
   <title>Authentication</title>
   <style>
     body {
-      background-image: url('path/to/your/background-image.jpg');
+      background-image: url('https://cdn.wallpapersafari.com/30/65/3MWNjf.jpg');
       background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Pricedown Bl', sans-serif;
     }
 
     .container {
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(0, 0, 0, 0.8);
       padding: 30px;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 0;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
       max-width: 500px;
       width: 90%;
       text-align: center;
+      color: #fff;
     }
 
     h2 {
       margin-top: 0;
       font-size: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     form {
       display: none;
+      max-width: 400px;
+      margin: 0 auto;
     }
 
     form.active {
@@ -44,19 +48,33 @@
       padding: 12px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
-      border-radius: 3px;
+      border-radius: 0;
       font-size: 1.1rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #000;
     }
 
     button {
       width: 100%;
       padding: 12px;
-      background-color: #4CAF50;
+      background-color: #ff4500;
       color: white;
       border: none;
-      border-radius: 3px;
+      border-radius: 0;
       cursor: pointer;
       font-size: 1.1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .remember-me {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .remember-me input[type="checkbox"] {
+      margin-right: 5px;
     }
 
     .switch-form {
@@ -65,9 +83,10 @@
     }
 
     .switch-form a {
-      color: #4CAF50;
+      color: #ff4500;
       text-decoration: none;
       font-size: 1.1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
   </style>
 </head>
@@ -75,7 +94,7 @@
   <div class="container">
     <h2>Authentication</h2>
 
-    <form id="register-form" class="active">
+    <form id="register-form">
       <input type="text" placeholder="Username" required>
       <input type="email" placeholder="Email" required>
       <input type="password" placeholder="Password" required>
@@ -83,9 +102,13 @@
       <button type="submit">Register</button>
     </form>
 
-    <form id="login-form">
+    <form id="login-form" class="active">
       <input type="text" placeholder="Username" required>
       <input type="password" placeholder="Password" required>
+      <div class="remember-me">
+        <input type="checkbox" id="remember-me">
+        <label for="remember-me">Remember me</label>
+      </div>
       <button type="submit">Login</button>
     </form>
 
@@ -95,8 +118,8 @@
     </form>
 
     <div class="switch-form">
-      <a href="#" id="switch-to-login">Login</a> | 
-      <a href="#" id="switch-to-register">Register</a> | 
+      <a href="#" id="switch-to-login">Login</a> |
+      <a href="#" id="switch-to-register">Register</a> |
       <a href="#" id="switch-to-reset">Reset Password</a>
     </div>
   </div>
@@ -108,6 +131,28 @@
     const switchToLogin = document.getElementById('switch-to-login');
     const switchToRegister = document.getElementById('switch-to-register');
     const switchToReset = document.getElementById('switch-to-reset');
+    const forms = document.querySelectorAll('form');
+
+    function showForm(formType) {
+      forms.forEach(form => form.style.display = 'none');
+      switch (formType) {
+        case 'login':
+          loginForm.style.display = 'block';
+          break;
+        case 'register':
+          registerForm.style.display = 'block';
+          break;
+        case 'reset':
+          resetPasswordForm.style.display = 'block';
+          break;
+      }
+    }
+    
+    window.addEventListener('message', (event) => {
+      if (event.data.event === 'auth:showForm') {
+        showForm(event.data.data);
+      }
+    });
 
     switchToLogin.addEventListener('click', () => {
       registerForm.classList.remove('active');
@@ -145,8 +190,9 @@
       e.preventDefault();
       const username = e.target.elements[0].value;
       const password = e.target.elements[1].value;
-      // alt.emitServer('auth:login', username, password);
-      console.log('Login:', username, password);
+      const rememberMe = e.target.elements[2].checked;
+      // alt.emitServer('auth:login', username, password, rememberMe);
+      console.log('Login:', username, password, rememberMe);
     });
 
     resetPasswordForm.addEventListener('submit', (e) => {
@@ -155,6 +201,84 @@
       // alt.emitServer('auth:resetPassword', email);
       console.log('Reset Password:', email);
     });
+
+    window.addEventListener('load', () => {
+    const forms = document.querySelectorAll('form');
+    const registerForm = document.getElementById('register-form');
+    const loginForm = document.getElementById('login-form');
+    const resetPasswordForm = document.getElementById('reset-password-form');
+
+    function showForm(formType) {
+      forms.forEach(form => form.style.display = 'none');
+      switch (formType) {
+        case 'login':
+          loginForm.style.display = 'block';
+          break;
+        case 'register':
+          registerForm.style.display = 'block';
+          break;
+        case 'reset':
+          resetPasswordForm.style.display = 'block';
+          break;
+      }
+    }
+
+    window.addEventListener('message', (event) => {
+      if (event.data.event === 'auth:showForm') {
+        showForm(event.data.data);
+      }
+    });
+
+  // Інші обробники подій і логіка
+});
+
+  function showForm(formType) {
+    forms.forEach(form => form.style.display = 'none');
+    switch (formType) {
+      case 'login':
+        loginForm.style.display = 'block';
+        break;
+      case 'register':
+        registerForm.style.display = 'block';
+        break;
+      case 'reset':
+        resetPasswordForm.style.display = 'block';
+        break;
+    }
+  }
+
+  window.addEventListener('message', (event) => {
+    if (event.data.event === 'auth:showForm') {
+      showForm(event.data.data);
+    }
+  });
+
+  registerForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const username = e.target.elements[0].value;
+    const email = e.target.elements[1].value;
+    const password = e.target.elements[2].value;
+    const confirmPassword = e.target.elements[3].value;
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+    alt.emit('auth:registerData', username, email, password);
+  });
+
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = e.target.elements[0].value;
+    const password = e.target.elements[1].value;
+    const rememberMe = e.target.elements[2].checked;
+    alt.emit('auth:loginData', email, password, rememberMe);
+  });
+
+  resetPasswordForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = e.target.elements[0].value;
+    alt.emit('auth:resetPasswordData', email);
+  });
   </script>
 </body>
 </html>

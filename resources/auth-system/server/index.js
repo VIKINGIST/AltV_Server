@@ -4,6 +4,15 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { getUserByEmail, createUser, updateUserPassword } = require('./database');
 
+function getHardwareId(player) {
+  let hardwareId;
+  if (player && player.valid) {
+    hardwareId = alt.Player.local.getSyncedMeta('hardwareId') || alt.getUniqueId(player);
+    alt.Player.local.setSyncedMeta('hardwareId', hardwareId);
+  }
+  return hardwareId;
+}
+
 // Секретний ключ для підпису JWT
 const jwtSecret = process.env.JWT_SECRET;
 

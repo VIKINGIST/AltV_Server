@@ -1,22 +1,27 @@
-// client/index.js
-
 import * as alt from 'alt-client';
 import * as native from 'natives';
 
 let authView = null;
 
-function showLoginForm() {
+function showLoginForm(formType = 'login') {
   if (!authView) {
     authView = new alt.WebView("http://resource/ui/html/index.html");
+
     authView.on('load', () => {
       alt.log('WebView loaded successfully');
+      authView.emit('auth:showForm', formType);
     });
+
     authView.on('error', (err) => {
       alt.log('WebView error:', err);
     });
+
     authView.focus();
     alt.showCursor(true);
     alt.toggleGameControls(false);
+  } else {
+    authView.emit('auth:showForm', formType);
+    authView.focus();
   }
 }
 
@@ -29,20 +34,8 @@ function hideLoginForm() {
   }
 }
 
-function showRegistrationForm() {
-  // Код для показу форми реєстрації
-  // ...
-}
-
-function showPasswordResetForm() {
-  // Код для показу форми відновлення паролю
-  // ...
-}
-
 alt.onServer('auth:loginSuccess', (token) => {
-  // Збереження токена на клієнті (наприклад, у локальному сховищі)
   localStorage.setItem('token', token);
-
   hideLoginForm();
   // Додатковий код для виконання після успішного входу
 });
@@ -51,9 +44,18 @@ alt.on('connectionComplete', () => {
   showLoginForm();
 });
 
-alt.on('auth:showLoginForm', showLoginForm);
-alt.on('auth:showRegistrationForm', showRegistrationForm);
-alt.on('auth:showPasswordResetForm', showPasswordResetForm);
+alt.on('auth:showLoginForm', () => showLoginForm('login'));
+alt.on('auth:showRegistrationForm', () => showLoginForm('register'));
+alt.on('auth:showPasswordResetForm', () => showLoginForm('reset'));
 
-// Інші обробники подій та логіка клієнтської частини
-// ...
+alt.on('auth:registerData', (username, email, password) => {
+  alt.emitServer('auth:register', username, email, password);
+});
+
+alt.on('auth:loginData', (email, password, rememberMe) => {
+  alt.emitServer('auth:login', email, password, rememberMe);
+});
+
+alt.on('auth:resetPasswordData', (email) => {
+  alt.emitServer('auth:resetPassword', email);
+});
