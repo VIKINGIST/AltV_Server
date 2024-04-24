@@ -7,6 +7,8 @@ async function register(player, username, email, password) {
   try {
     const hardwareId = getHardwareId(player);
     const hashedPassword = await hashPassword(password);
+    console.log('Створення нового користувача:', username, email);
+    alt.log('Створення нового користувача:', username, email);
     const newUser = await userController.createUser(username, email, hashedPassword, hardwareId);
     const token = generateToken(newUser.id);
     alt.emitClient(player, 'auth:register', token);
@@ -18,6 +20,8 @@ async function register(player, username, email, password) {
 
 async function login(player, email, password) {
   try {
+    console.log('Користувач знайдений:', user);
+    alt.log('Користувач знайдений:', user);
     const user = await getUserByEmail(email);
     if (!user) {
       throw new Error('Неправильна електронна пошта або пароль');
@@ -38,6 +42,8 @@ async function login(player, email, password) {
 
 async function resetPassword(player, email) {
   try {
+    console.log('Користувач знайдений:', user);
+    alt.log('Користувач знайдений:', user);
     const user = await getUserByEmail(email);
     if (!user) {
       throw new Error('Користувач з такою електронною поштою не знайдений');

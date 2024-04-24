@@ -1,0 +1,83 @@
+body {
+    background-image: url('https://cdn.wallpapersafari.com/30/65/3MWNjf.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Pricedown Bl', sans-serif;
+  }
+
+  .container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    color: #fff;
+  }
+
+  h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  form {
+    display: none;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  form.active {
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .remember-me {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .remember-me input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+  .switch-form {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .switch-form a {
+    color: #ff4500;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }

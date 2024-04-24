@@ -15,6 +15,7 @@ function getHardwareId(player) {
 alt.onClient('auth:register', async (player, username, email, password) => {
   try {
     const hardwareId = getHardwareId(player);
+    alt.log('Отримано дані реєстрації від клієнта:', username, email, password);
     await authController.register(player, username, email, password, hardwareId);
   } catch (error) {
     console.error('Error during registration:', error);
@@ -24,6 +25,7 @@ alt.onClient('auth:register', async (player, username, email, password) => {
 
 alt.onClient('auth:login', async (player, email, password) => {
   try {
+    alt.log('Отримано дані входу від клієнта:', email, password);
     await authController.login(player, email, password);
   } catch (error) {
     console.error('Error during login:', error);
@@ -33,6 +35,7 @@ alt.onClient('auth:login', async (player, email, password) => {
 
 alt.onClient('auth:resetPassword', async (player, email) => {
   try {
+    alt.log('Отримано дані скидання пароля від клієнта:', email);
     await authController.resetPassword(player, email);
   } catch (error) {
     console.error('Error during password reset:', error);
