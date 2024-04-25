@@ -23,6 +23,17 @@ alt.onClient('auth:register', async (player, username, email, password) => {
   }
 });
 
+alt.onClient('auth:register', async (player, username, email, password) => {
+  try {
+    const hardwareId = getHardwareId(player);
+    alt.log('Отримано дані реєстрації від клієнта:', username, email, password);
+    await authController.register(player, username, email, password, hardwareId);
+  } catch (error) {
+    console.error('Error during registration:', error);
+    player.send(`Сталася помилка під час реєстрації: ${error.message}`);
+  }
+});
+
 alt.onClient('auth:login', async (player, email, password) => {
   try {
     alt.log('Отримано дані входу від клієнта:', email, password);

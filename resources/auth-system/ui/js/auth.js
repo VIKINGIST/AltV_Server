@@ -51,7 +51,7 @@ window.addEventListener('message', (event) => {
   }
 });
 
-// Обробники подій для відправки даних форм в alt:V
+// Обробники подій для відправки даних форм в alt:V client
 function registerHandler(e) {
     e.preventDefault();
     const username = registerForm.elements[0].value;
@@ -62,12 +62,9 @@ function registerHandler(e) {
       alert("Passwords do not match!");
       return;
     }
+    //Client resource to client resource
     console.log('Відправка даних реєстрації на сервер:', username, email, password);
-    if (window.alt) {
-      window.alt.emit('auth:registerData', username, email, password);
-    } else {
-      console.error('alt:V API не доступний. Переконайтеся, що ви запускаєте скрипт в alt:V.');
-    }
+    alt.emit('auth:registerData', username, email, password);
   }
 
 function loginHandler(e) {

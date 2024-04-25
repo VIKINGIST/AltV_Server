@@ -48,10 +48,12 @@ alt.on('auth:showLoginForm', () => showLoginForm('login'));
 alt.on('auth:showRegistrationForm', () => showLoginForm('register'));
 alt.on('auth:showPasswordResetForm', () => showLoginForm('reset'));
 
-alt.onServer('auth:registerData', (username, email, password) => {
-  console.log('Отримано дані реєстрації від WebView:', username, email, password);
-  alt.emitServer('auth:register', username, email, password);
-});
+// Client to server registerData
+  alt.on('auth:registerData', (username, email, password) => {
+    console.log('Отримано дані реєстрації UI\\js\\auth.js:', username, email, password);
+    alt.emitServer('auth:register', username, email, password);
+  });
+
 
 alt.on('auth:loginData', (email, password, rememberMe) => {
   alt.log('Отримано дані входу від WebView:', email, password, rememberMe);
